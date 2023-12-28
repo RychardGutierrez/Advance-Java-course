@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.util.Optional;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -21,7 +22,29 @@ public class Main {
 
 //        System.out.println(concurrenceAtomic.count);
 //        Concurrence_Atomic.run();
-        Deadlock deadlock = new Deadlock();
-        deadlock.run();
+//        Deadlock deadlock = new Deadlock();
+//        deadlock.run();
+//        Livelock livelock = new Livelock();
+//        livelock.run();
+
+//        Starvation starvation = new Starvation();
+//        starvation.run();
+
+//        BuilderPattern builderPattern = BuilderPattern.Builder.aBuilderPattern()
+//                .withFirstname("test")
+//                .withLastname("test last name")
+//                .withEmail("email@test.com")
+//                .withPhone("1231234444").build();
+//
+//        String builderPerson = builderPattern.toString();
+//        System.out.println(builderPerson);
+
+        OptionalClass score = new OptionalClass();
+        Optional<Double> result = score.averageScore(1.0, 2.0, 3.0, 4.0, 5.0);
+        if (result.isPresent()) {
+            System.out.println(result.get());
+        }
+
+        OptionalClass.listOptionalExample();
     }
 }
