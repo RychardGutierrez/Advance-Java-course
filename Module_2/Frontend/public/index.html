@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Engine</title>
+    <link rel="stylesheet" href="./style/index.css" />
+  </head>
+  <body>
+    <div class="container">
+      <img src="./img/google.png" />
+      <section>
+        <input id="searchInput" type="text" />
+        <div class="search-button">
+          <button onclick="search()">Google Search</button>
+          <button>I'm Feeling Lucky</button>
+        </div>
+      </section>
+    </div>
+    <script>
+      function search() {
+        let textQuery = document.getElementById('searchInput').value;
+        document.location.href = `search.html?query=${textQuery}`;
+      }
+    </script>
+  </body>
+</html>
